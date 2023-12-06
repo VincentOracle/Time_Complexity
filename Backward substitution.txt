@@ -1,0 +1,104 @@
+2) If T(K-6) =89, find the value of K
+
+To find the value of K when T(K-6) = 89, you can use the given recursive relation T(n) = T(n-2) + T(n-1) and work backward.
+
+Given T(K-6) = 89, let's find T(K-5) using the same relation:
+
+T(K-5) = T((K-6) - 2) + T((K-6) - 1) = T(K-8) + T(K-7)
+
+Now, let's continue this process, finding T(K-4), T(K-3), T(K-2), and T(K-1):
+
+T(K-4) = T(K-6) + T(K-5) = 89 + T(K-8) + T(K-7)
+T(K-3) = T(K-5) + T(K-4) = T(K-8) + T(K-7) + 89 + T(K-8) + T(K-7)
+T(K-2) = T(K-4) + T(K-3) = 89 + T(K-8) + T(K-7) + T(K-8) + T(K-7) + T(K-8) + T(K-7)
+T(K-1) = T(K-3) + T(K-2) = (T(K-8) + T(K-7) + 89 + T(K-8) + T(K-7)) + (89 + T(K-8) + T(K-7) + T(K-8) + T(K-7) + T(K-8) + T(K-7))
+
+Now, since we want to find K when T(K-6) = 89, we need to look for a pattern. Notice that T(K-8) and T(K-7) terms appear multiple times in the equations for T(K-2) and T(K-1). We can factor them out:
+
+T(K-1) = 89 + T(K-8) + T(K-7) + 89 + (T(K-8) + T(K-7)) + (89 + T(K-8) + T(K-7))
+
+We can see that T(K-1) can be expressed in terms of T(K-8) and T(K-7) repeatedly:
+
+T(K-1) = 3 * (T(K-8) + T(K-7)) + 89
+
+Now, if T(K-6) = 89, we can substitute this value:
+
+89 = 3 * (T(K-8) + T(K-7)) + 89
+
+Subtract 89 from both sides:
+
+0 = 3 * (T(K-8) + T(K-7))
+
+Now, if 3 times the sum of T(K-8) and T(K-7) is equal to zero, it implies that:
+
+T(K-8) + T(K-7) = 0
+
+Now, we need to find a positive integer K for which this equation holds true. Since we don't have more information about the initial conditions of the sequence, it's not possible to determine a unique value of K based on the provided information. The value of K would depend on the specific properties of the sequence.
+
+
+
+
+
+the initial conditions are:
+T(1) = 3
+T(2) = 5
+ChatGPT
+Thank you for providing the initial conditions. With T(1) = 3 and T(2) = 5, we can now determine the value of K when T(K-6) = 89.
+
+We already established the following relationship:
+
+T(K-8) + T(K-7) = 0
+
+Now, let's use this relationship to find the value of K when T(K-6) = 89:
+
+T(K-6) = T(K-8) + T(K-7)
+
+Since T(K-8) + T(K-7) = 0, we have:
+
+T(K-6) = 0 + 89
+T(K-6) = 89
+
+Now, you want to find the value of K when T(K-6) = 89, and we've just shown that this is the case. Therefore, K - 6 must be equal to 6 because when you subtract 6 from K, you get T(K-6), which is equal to 89. So:
+
+K - 6 = 6
+
+Add 6 to both sides:
+
+K = 12
+
+Therefore, K is equal to 12 when T(K-6) = 89.
+
+
+
+
+User
+now give a comprehensive answer once again
+
+Certainly, here's a comprehensive answer to the question:
+
+Given the recursive relation T(n) = T(n-2) + T(n-1) with the initial conditions T(1) = 3 and T(2) = 5, we want to find the value of K when T(K-6) = 89.
+
+First, we can establish the relationship between T(K-8) and T(K-7):
+
+T(K-8) + T(K-7) = 0
+
+Next, we use this relationship to find T(K-6) as follows:
+
+T(K-6) = T(K-8) + T(K-7)
+
+Since T(K-8) + T(K-7) = 0, it simplifies to:
+
+T(K-6) = 0 + 89
+T(K-6) = 89
+
+We've established that T(K-6) is equal to 89.
+
+To find K, we equate K-6 to 6 because when you subtract 6 from K, you get T(K-6), which is equal to 89:
+
+K - 6 = 6
+
+Add 6 to both sides to isolate K:
+
+K = 12
+
+So, with the given initial conditions, K is equal to 12 when T(K-6) = 89.
